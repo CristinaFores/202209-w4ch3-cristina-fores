@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# Data Layer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Show data:
 
-## Available Scripts
+- The keys numbers.
+- Input with the dialed numbers.
 
-In the project directory, you can run:
+## Modified data:
 
-### `npm start`
+- The dialed numbers.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Info
 
-### `npm test`
+- An Info Component with the text "Calling..." that shows up when the call button is clicked.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Display
 
-### `npm run build`
+### Data show:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- An input element with dialed numbers.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Get actions:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- When phone call is ended, the numbers are removed.
 
-### `npm run eject`
+## Actions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Data show:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- A button with the text "Call" when the phone is not calling.
+- A button with the text "Hang" when the call is on the go.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Action
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Display
 
-## Learn More
+Data show:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- An input element with dialed numbers.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Get actions:
+
+- When phone call is ended, the numbers are removed.
+
+## Actions
+
+Data show:
+
+- A button with the text "Call" when the phone is not calling.
+- A button with the text "Hang" when the call is on the go.
+
+## Action
+
+Data show:
+
+- A button with the received text
+
+Get action:
+
+- Call the received action on click
+
+## Keyboard
+
+- 10 keys with numbers from 0 to 9 and another key with the "delete" text
+
+Get action:
+
+- Get the selected number and add it to the display component
+- Delete the last number fromt the display component.
+
+## Key
