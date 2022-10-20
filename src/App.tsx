@@ -1,6 +1,7 @@
 import "./index.css";
 import Keyboard from "./components/Keyboard/Keyboard";
 import Display from "./components/Display/Display";
+import Actions from "./components/Actions/Actions";
 
 const App = (): JSX.Element => {
   return (
@@ -12,6 +13,7 @@ const App = (): JSX.Element => {
           </div>
           <div className="actions">
             <Display />
+            <Actions />
           </div>
         </main>
       </div>
