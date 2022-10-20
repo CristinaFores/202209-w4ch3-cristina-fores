@@ -8,15 +8,15 @@ interface PhoneContextProviderProps {
 const PhoneContextProvider = ({
   children,
 }: PhoneContextProviderProps): JSX.Element => {
-  const [numbers, setNumbers] = useState<number[]>([]);
+  const [numbers, setNumbers] = useState<string[]>([]);
 
   const [isCalling, setIsCalling] = useState<boolean>(false);
 
-  const loadNumbers = useCallback((numbers: number[]) => {
+  const loadNumbers = useCallback((numbers: string[]) => {
     setNumbers([...numbers]);
   }, []);
 
-  const addNumber = (number: number) => {
+  const addNumber = (number: string) => {
     if (numbers.length >= 9) return;
 
     setNumbers([...numbers, number]);

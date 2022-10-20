@@ -6,11 +6,12 @@ const Keyboard = (): JSX.Element => {
     <div className="keyboard-container">
       <ol className="keyboard">
         {numbers.map((number) => (
-          <Key numbersKey={number} action={() => {}} />
+          <Key
+            numbersKey={number}
+            action={() => {}}
+            className={`key ${number === "delete" ? "big" : ""}`}
+          />
         ))}
-        <li>
-          <button className="delete key big">Delete</button>
-        </li>
       </ol>
     </div>
   );
