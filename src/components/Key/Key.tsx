@@ -1,14 +1,15 @@
 interface KeyProps {
-  numbersKey: number;
+  numbersKey: string;
+  className: string;
   action: () => void;
 }
 
-const Key = ({ numbersKey, action }: KeyProps): JSX.Element => {
+const Key = ({ numbersKey, action, className }: KeyProps): JSX.Element => {
   return (
     <li>
       <button
         type="button"
-        className={"key"}
+        className={className}
         onClick={(event) => {
           event.preventDefault();
           action();
