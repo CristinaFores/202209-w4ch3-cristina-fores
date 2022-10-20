@@ -10,6 +10,7 @@ const Keyboard = (): JSX.Element => {
       <ol className="keyboard">
         {numbers.map((number) => (
           <Key
+            key={number}
             numbersKey={number}
             action={() => {
               number === "delete" ? deleteNumber() : addNumber(number);
