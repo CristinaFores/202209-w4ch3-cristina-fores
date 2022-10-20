@@ -1,11 +1,11 @@
 import { createContext } from "react";
 
-interface PhoneDataContextStructure {
+export interface PhoneDataContextStructure {
   numbers: string[];
   isCalling: boolean;
   addNumber: (number: string) => void;
-  callingState: (callingState: boolean) => void;
-  loadNumbers: (numbers: string[]) => void;
+  setIsCalling: (callingState: boolean) => void;
+  deleteNumber: () => void;
 }
 
 const PhoneContext = createContext<PhoneDataContextStructure>(
