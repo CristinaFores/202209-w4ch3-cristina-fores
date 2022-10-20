@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage wachAll=false",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -29,6 +30,7 @@
       "react-app/jest"
     ]
   },
+  "jest": {},
   "browserslist": {
     "production": [
       ">0.2%",
