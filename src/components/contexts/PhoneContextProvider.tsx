@@ -12,18 +12,16 @@ const PhoneContextProvider = ({
 
   const [isCalling, setIsCalling] = useState<boolean>(false);
 
-  const loadNumbers = useCallback((numbers: string[]) => {
-    setNumbers([...numbers]);
-  }, []);
-
   const addNumber = (number: string) => {
     if (numbers.length >= 9) return;
 
     setNumbers([...numbers, number]);
   };
 
-  const callingState = (callingState: boolean) => {
-    setIsCalling(callingState);
+  const deleteNumber = () => {
+    const newNumber = [...numbers];
+    newNumber.pop();
+    setNumbers(newNumber);
   };
 
   return (
@@ -32,8 +30,8 @@ const PhoneContextProvider = ({
         numbers,
         isCalling,
         addNumber,
-        callingState,
-        loadNumbers,
+        setIsCalling,
+        deleteNumber,
       }}
     >
       {children}
